@@ -60,7 +60,8 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>f", ":Telescope<cr>", opts)
+keymap("n", "ff", ":Telescope find_files<cr>", opts)
+keymap("", "<leader>f", ":Format<cr>", opts)
 --keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 
