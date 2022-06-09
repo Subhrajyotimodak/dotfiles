@@ -26,3 +26,4 @@ require "user.autocommands"
 require "user.nvim-tree"
 
 require "user.truezen"
+require "user.floaterm"
