@@ -33,7 +33,9 @@ project.setup({
 	silent_chdir = true,
 
 	---@usage list of lsp client names to ignore when using **lsp** detection. eg: { "efm", ... }
-	ignore_lsp = {},
+	ignore_lsp = {
+    "node_modules"
+  },
 
 	---@type string
 	---@usage path to store the project history for use in telescope

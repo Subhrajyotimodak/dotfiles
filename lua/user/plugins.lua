@@ -58,10 +58,14 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   -- use "folke/which-key.nvim"
+  use("mickael-menu/zk-nvim")
+  use("simrat39/rust-tools.nvim")
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use "artanikin/vim-synthwave84"
+  use 'bluz71/vim-nightfly-guicolors'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -98,12 +102,12 @@ return packer.startup(function(use)
   use 'voldikss/vim-floaterm'
 
   use {
-    "Pocco81/TrueZen.nvim", 
-    ft= {"md", "markdown", "txt"}
+    "Pocco81/TrueZen.nvim",
+    ft = { "md", "markdown", "txt" }
   }
   use {
     "folke/zen-mode.nvim",
-    ft= {"md", "markdown", "txt"}
+    ft = { "md", "markdown", "txt" }
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
