@@ -10,7 +10,7 @@ local servers = {
   "dartls",
   "emmet_ls",
   "eslint",
-  "grammarly",
+  -- "grammarly",
   "jdtls",
   "jsonls",
   "pyright",
@@ -19,6 +19,9 @@ local servers = {
   "sumneko_lua",
   "tsserver",
   "zk",
+	"solargraph",
+	"sorbet",
+	"svelte"
 }
 
 lsp_installer.setup {

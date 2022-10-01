@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  --use "akinsho/toggleterm.nvim"
+  use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   --use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -99,7 +99,7 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Terminal
-  use 'voldikss/vim-floaterm'
+  -- use 'voldikss/vim-floaterm'
 
   use {
     "Pocco81/TrueZen.nvim",
