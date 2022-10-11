@@ -1,32 +1,11 @@
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.colorscheme"
+if (vim.g.neovide) then
+	require "neovide"
+	return
+end
 
--- causing segmentation fault
-require "user.cmp"
-require "user.lsp"
+if (vim.g.vscode) then
+	require "vscode"
+	return
+end
 
-require "user.telescope"
-require "user.treesitter"
-
-
-require "user.autopairs"
-require "user.comment"
-require "user.gitsigns"
-require "user.bufferline"
-require "user.lualine"
-require "user.toggleterm"
-require "user.project"
-require "user.impatient"
-require "user.indentline"
-require "user.alpha"
-require "user.whichkey"
-require "user.autocommands"
-require "user.nvim-tree"
-
-require "user.truezen"
--- require "user.floaterm"
-
-require "user.zk"
-require "user.neovide"
+require "terminal"

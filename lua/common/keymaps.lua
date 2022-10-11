@@ -60,9 +60,7 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "ff", ":Telescope git_files<cr>", opts)
-keymap("n", "fb", ":Telescope buffers<cr>", opts)
-keymap("", "<leader>f", ":Format<cr>", opts)
+keymap("", "ff", ":Format<cr>", opts)
 keymap("", "<leader>t", ":lua vim.lsp.buf.code_action()<cr>", opts)
 --keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 

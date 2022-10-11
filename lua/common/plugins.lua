@@ -53,11 +53,11 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
-  --use "lewis6991/impatient.nvim"
+ 	use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  -- use "folke/which-key.nvim"
+  use "folke/which-key.nvim"
   use("mickael-menu/zk-nvim")
   use("simrat39/rust-tools.nvim")
 

@@ -1,0 +1,22 @@
+require "common.options"
+require "common.keymaps"
+require "common.plugins"
+require "common.colorscheme"
+
+require "common.autopairs"
+require "common.comment"
+require "common.gitsigns"
+require "common.bufferline"
+require "common.lualine"
+require "common.toggleterm"
+require "common.project"
+require "common.impatient"
+require "common.indentline"
+require "common.alpha"
+require "common.whichkey"
+require "common.autocommands"
+
+require "common.truezen"
+-- require "common.floaterm"
+
+require "common.zk"
