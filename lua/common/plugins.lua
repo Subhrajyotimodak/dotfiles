@@ -60,12 +60,14 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use("mickael-menu/zk-nvim")
   use("simrat39/rust-tools.nvim")
+	use 'simrat39/symbols-outline.nvim'
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "artanikin/vim-synthwave84"
   use 'bluz71/vim-nightfly-guicolors'
+	use 'gosukiwi/vim-atom-dark'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -87,6 +89,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+	use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Treesitter
   use {

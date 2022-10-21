@@ -61,8 +61,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("", "ff", ":Format<cr>", opts)
-keymap("", "<leader>t", ":lua vim.lsp.buf.code_action()<cr>", opts)
---keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>m", ":SymbolsOutline<cr>", opts)
 
 
 
