@@ -21,7 +21,8 @@ local servers = {
   "zk",
 	"solargraph",
 	"sorbet",
-	"svelte"
+	"svelte",
+	"tailwindcss"
 }
 
 lsp_installer.setup {

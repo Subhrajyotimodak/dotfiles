@@ -16,7 +16,7 @@ require "common.comment"
 require "common.gitsigns"
 require "common.bufferline"
 require "common.lualine"
---[[ require "common.toggleterm" ]]
+require "common.toggleterm"
 require "common.project"
 require "common.impatient"
 require "common.indentline"

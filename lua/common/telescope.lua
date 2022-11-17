@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 local actions = require "telescope.actions"
+local builtin = require "telescope.builtin"
 telescope.load_extension('media_files')
 
 telescope.setup {
@@ -86,6 +87,7 @@ telescope.setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
+		live_grep = {}
   },
   extensions = {
     file_browser = {

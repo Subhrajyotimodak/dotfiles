@@ -51,7 +51,6 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
  	use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -61,6 +60,10 @@ return packer.startup(function(use)
   use("mickael-menu/zk-nvim")
   use("simrat39/rust-tools.nvim")
 	use 'simrat39/symbols-outline.nvim'
+
+
+	-- for java "F in the chat"
+	use { "mfussenegger/nvim-jdtls", ft = { "java" }}
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -103,6 +106,7 @@ return packer.startup(function(use)
 
   -- Terminal
   -- use 'voldikss/vim-floaterm'
+	use 'akinsho/toggleterm.nvim'
 
   use {
     "Pocco81/TrueZen.nvim",

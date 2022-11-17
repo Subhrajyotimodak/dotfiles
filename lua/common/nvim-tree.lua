@@ -34,10 +34,37 @@ local nvim_tree_icons = {
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
+	respect_buf_cwd = true,
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = false,
+	actions = {
+		change_dir = { enable = true, global = false },
+		open_file = {
+			quit_on_open = false,
+			resize_window = false,
+			window_picker = {
+				enable = true,
+				chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+				exclude = {
+					filetype = {
+						"notify",
+						"packer",
+						"qf",
+						"diff",
+						"fugitive",
+						"fugitiveblame",
+					},
+					buftype = { "nofile", "terminal", "help" },
+				},
+			},
+		},
+	},
 	renderer = {
+		highlight_git = true, -- will enable file highlight for git attributes (can be used without the icons).
+		highlight_opened_files = "3", -- 0 -> "none" 1 -> "icon" 2 -> "name" 3 -> "all"
+		add_trailing = true, -- append a trailing slash to folder names
+		group_empty = true, --  compact folders that only contain a single folder
 		icons = {
 			webdev_colors = true,
 			git_placement = "before",
@@ -102,6 +129,8 @@ nvim_tree.setup {
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
 				{ key = "h", cb = tree_cb "close_node" },
 				{ key = "v", cb = tree_cb "vsplit" },
+				{ key = "<", cb = tree_cb("prev_sibling") },
+				{ key = ">", cb = tree_cb("next_sibling") },
 			},
 		},
 		number = false,
@@ -111,12 +140,12 @@ nvim_tree.setup {
 		cmd = "trash",
 		require_confirm = true,
 	},
-	 root_folder_modifier = ":t",
-	 show_icons = {
-	   git = 1,
-	   folders = 1,
-	   files = 1,
-	   folder_arrows = 1,
-	   tree_width = 30,
-	 },
+	root_folder_modifier = ":t",
+	show_icons = {
+		git = 1,
+		folders = 1,
+		files = 1,
+		folder_arrows = 1,
+		tree_width = 30,
+	},
 }
