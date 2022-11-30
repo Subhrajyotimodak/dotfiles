@@ -59,9 +59,15 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", ":NeoTreeFloatToggle<cr>", opts)
+--[[ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) ]]
 keymap("", "ff", ":Format<cr>", opts)
 keymap("n", "<leader>m", ":SymbolsOutline<cr>", opts)
+
+keymap("n", "<leader>f", ":Telescope git_files<cr>", opts)
+keymap("n", "<leader>b", ":Telescope buffers<cr>", opts)
+keymap("n", "<leader>w", ":wa<cr>", opts)
+keymap("n", "<leader>tt", ":ToggleTerm<CR>", opts)
 
 
 

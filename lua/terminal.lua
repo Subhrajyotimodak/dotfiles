@@ -9,6 +9,7 @@ require "common.lsp"
 
 require "common.telescope"
 require "common.treesitter"
+require "common.neo-tree"
 
 
 require "common.autopairs"
@@ -21,9 +22,9 @@ require "common.project"
 require "common.impatient"
 require "common.indentline"
 require "common.alpha"
-require "common.whichkey"
+--[[ require "common.whichkey" ]]
 require "common.autocommands"
-require "common.nvim-tree"
+--[[ require "common.nvim-tree" ]]
 
 require "common.truezen"
 require "common.symbols-outline"

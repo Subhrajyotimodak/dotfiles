@@ -23,7 +23,8 @@ require "common.indentline"
 require "common.alpha"
 require "common.whichkey"
 require "common.autocommands"
-require "common.nvim-tree"
+--[[ require "common.nvim-tree" ]]
+require "common.neo-tree"
 
 require "common.truezen"
 require "common.symbols-outline"

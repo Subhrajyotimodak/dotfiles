@@ -1,4 +1,4 @@
-if (vim.g.neovide) then
+if (vim.g.neovide or vim.g.goneovim) then
 	require "neovide"
 	return
 end
