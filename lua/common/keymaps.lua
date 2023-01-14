@@ -1,7 +1,10 @@
+local utils = require("utils")
 local opts = { noremap = true, silent = true }
+local noremap_opts = { noremap = false, silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
+local remap = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -60,7 +63,6 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 keymap("n", "<leader>e", ":NeoTreeFloatToggle<cr>", opts)
---[[ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) ]]
 keymap("", "ff", ":Format<cr>", opts)
 keymap("n", "<leader>m", ":SymbolsOutline<cr>", opts)
 
@@ -69,6 +71,15 @@ keymap("n", "<leader>b", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>w", ":wa<cr>", opts)
 keymap("n", "<leader>tt", ":ToggleTerm<CR>", opts)
 
+local text_files = {"md", "markdown", "txt"}
+
+if utils.has_value(text_files, vim.bo.filetype) then
+	keymap("n", "j", "gj", noremap_opts)
+	keymap("n", "k", "gk", noremap_opts)
+
+	keymap("n", "<Down>", "gj", noremap_opts)
+	keymap("n", "<Up>", "gk", noremap_opts)
+end
 
 
 -- Terminal --

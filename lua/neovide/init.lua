@@ -21,7 +21,7 @@ require "common.project"
 --[[ require "common.impatient" ]]
 require "common.indentline"
 require "common.alpha"
-require "common.whichkey"
+--[[ require "common.whichkey" ]]
 require "common.autocommands"
 --[[ require "common.nvim-tree" ]]
 require "common.neo-tree"
