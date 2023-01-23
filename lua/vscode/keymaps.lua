@@ -1,4 +1,4 @@
-local opts = {noremap = true, silent= true}
+local opts = { noremap = true, silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -22,6 +22,11 @@ keymap("n", "<C-h>", ":call VSCodeNotify('workbench.action.navigateLeft')<CR>", 
 keymap("n", "<C-j>", ":call VSCodeNotify('workbench.action.navigateDown')<CR>", opts)
 keymap("n", "<C-k>", ":call VSCodeNotify('workbench.action.navigateUp')<CR>", opts)
 keymap("n", "<C-l>", ":call VSCodeNotify('workbench.action.navigateRight')<CR>", opts)
+keymap("n", "<leader>w", ":call VSCodeNotify('workbench.action.files.saveFiles')<CR>", opts)
+keymap("n", "ff", ":call VSCodeNotify('editor.action.formatDocument')<CR>", opts)
+keymap("n", "<leader>b", ":call VSCodeNotify('workbench.action.quickOpenNavigateNextInFilePicker')<CR>", opts)
+keymap("n", "<leader>q", ":call VSCodeNotify('workbench.actions.view.problems')<CR>", opts)
+
 -- Navigate Buffer
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
@@ -33,4 +38,3 @@ keymap("", "<leader>e", ":call VSCodeNotify('workbench.action.toggleSidebarVisib
 keymap("n", "gcc", ":call VSCodeNotify('editor.action.commentLine')<CR>", opts)
 -- keymap("x", "gc", ":call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>", opts)
 keymap("x", "gc", ":call VSCodeCallVisual('editor.action.blockComment', 0)<CR>", opts)
-

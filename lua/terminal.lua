@@ -30,3 +30,5 @@ require "common.truezen"
 require "common.symbols-outline"
 
 require "common.zk"
+require "common.mason"
+require "common.colorizer"

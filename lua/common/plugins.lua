@@ -61,7 +61,9 @@ return packer.startup(function(use)
 	use("mickael-menu/zk-nvim")
 	use("simrat39/rust-tools.nvim")
 	use 'simrat39/symbols-outline.nvim'
-
+	use { "williamboman/mason.nvim" }
+	use {"onsails/lspkind.nvim"}
+	use {'norcalli/nvim-colorizer.lua'}
 
 	-- for java "F in the chat"
 	use { "mfussenegger/nvim-jdtls", ft = { "java" } }
