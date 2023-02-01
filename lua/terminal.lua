@@ -1,34 +1,24 @@
-require "common.options"
-require "common.keymaps"
-require "common.plugins"
-require "common.colorscheme"
+require("common.core.keymaps")
+require("common.core.options")
+require("common.core.colorscheme")
+require("common.plugin_manager")
 
--- causing segmentation fault
-require "common.cmp"
-require "common.lsp"
+require("common.plugins.cmp")
+require("common.plugins.comment")
+require("common.plugins.lualine")
+require("common.plugins.neo-tree")
+require("common.plugins.telescope")
+require("common.plugins.auto-pairs")
+require("common.plugins.treesitter")
+require("common.plugins.autocommands")
+require("common.plugins.zk")
+require("common.plugins.colorizer")
+require("common.plugins.bufferline")
+require("common.plugins.alpha")
+require("common.plugins.project")
 
-require "common.telescope"
-require "common.treesitter"
-require "common.neo-tree"
-
-
-require "common.autopairs"
-require "common.comment"
-require "common.gitsigns"
-require "common.bufferline"
-require "common.lualine"
-require "common.toggleterm"
-require "common.project"
-require "common.impatient"
-require "common.indentline"
-require "common.alpha"
---[[ require "common.whichkey" ]]
-require "common.autocommands"
---[[ require "common.nvim-tree" ]]
-
-require "common.truezen"
-require "common.symbols-outline"
-
-require "common.zk"
-require "common.mason"
-require "common.colorizer"
+require("common.language-server-protocol.mason")
+---@diagnostic disable-next-line: different-requires
+require("common.language-server-protocol.lspconfig")
+require("common.language-server-protocol.lspsaga")
+require("common.language-server-protocol.null-ls")
