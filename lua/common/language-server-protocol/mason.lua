@@ -3,8 +3,9 @@ local lsp_servers = {
 	"html",
 	"cssls",
 	"tailwindcss",
-	"sumneko_lua",
+	"lua_ls",
 	"emmet_ls",
+	"pyright",
 }
 
 local linters_and_formatters = {

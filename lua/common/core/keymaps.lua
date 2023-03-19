@@ -31,11 +31,9 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
-
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
 
 -- clear search highlights
 keymap("n", "<leader>nh", ":nohl<CR>", opts)
@@ -47,19 +45,12 @@ keymap("n", "x", '"_x', opts)
 keymap("n", "<leader>+", "<C-a>", opts) -- increment
 keymap("n", "<leader>-", "<C-x>", opts) -- decrement
 
-
 ------------------------
 --   Plugin Keymaps   --
 ------------------------
 
 -- neo tree keymap
 keymap("n", "<leader>e", ":NeoTreeFloatToggle<cr>", opts)
-
--- format
-keymap("", "ff", ":Format<cr>", opts)
-
--- outline
-keymap("n", "<leader>m", ":SymbolsOutline<cr>", opts)
 
 -- Telescope
 keymap("n", "<leader>fg", ":Telescope git_files<cr>", opts)

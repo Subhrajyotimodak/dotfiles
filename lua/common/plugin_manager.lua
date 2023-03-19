@@ -107,6 +107,27 @@ local packer_install = function(use)
 		ft = { "md", "markdown", "txt" },
 	})
 	use("mickael-menu/zk-nvim")
+
+	----------------
+	-- Typescript --
+	----------------
+
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+
+	----------------------
+	-- Dart and Flutter --
+	----------------------
+	use({
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			--[[ "stevearc/dressing.nvim", -- optional for vim.ui.select ]]
+		},
+	})
+	--[[ use("dart-lang/dart-vim-plugin") ]]
+	--[[ use("thosakwe/vim-flutter") ]]
+	--[[ use("natebosch/vim-lsc") ]]
+	--[[ use("natebosch/vim-lsc-dart") ]]
 end
 
 -- auto install packer if not installed
