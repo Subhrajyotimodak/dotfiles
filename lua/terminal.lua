@@ -16,6 +16,8 @@ require("common.plugins.colorizer")
 require("common.plugins.bufferline")
 require("common.plugins.alpha")
 require("common.plugins.project")
+require("common.plugins.gitsigns")
+require("common.plugins.copilot")
 
 require("common.language-server-protocol.mason")
 ---@diagnostic disable-next-line: different-requires

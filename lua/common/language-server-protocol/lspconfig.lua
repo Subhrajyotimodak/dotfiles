@@ -77,12 +77,12 @@ typescript.setup({
 	},
 })
 
-flutter_tools.setup({
-	lsp = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
-})
+--[[ flutter_tools.setup({ ]]
+--[[ 	lsp = { ]]
+--[[ 		capabilities = capabilities, ]]
+--[[ 		on_attach = on_attach, ]]
+--[[ 	}, ]]
+--[[ }) ]]
 
 -- configure css server
 lspconfig["cssls"].setup({

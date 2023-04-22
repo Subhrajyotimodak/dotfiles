@@ -30,7 +30,7 @@ local packer_install = function(use)
 	use("numToStr/Comment.nvim")
 
 	-- file explorer
-	use({ "nvim-neo-tree/neo-tree.nvim", requires = { "MunifTanjim/nui.nvim" } })
+	use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = { "MunifTanjim/nui.nvim" } })
 	use("akinsho/bufferline.nvim")
 
 	-- vs-code like icons
@@ -48,6 +48,7 @@ local packer_install = function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
+	use("github/copilot.vim") -- github copilot
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
@@ -119,10 +120,6 @@ local packer_install = function(use)
 	----------------------
 	use({
 		"akinsho/flutter-tools.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			--[[ "stevearc/dressing.nvim", -- optional for vim.ui.select ]]
-		},
 	})
 	--[[ use("dart-lang/dart-vim-plugin") ]]
 	--[[ use("thosakwe/vim-flutter") ]]

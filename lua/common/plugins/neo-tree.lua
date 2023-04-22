@@ -9,23 +9,15 @@ local config = {
 	enable_diagnostics = true,
 	popup_border_style = "rounded",
 	source_selector = {
-		winbar = true,
+		winbar = false,
 		content_layout = "center",
-		tab_labels = {
-			--[[ filesystem = astronvim.get_icon "FolderClosed" .. " File", ]]
-			--[[ buffers = astronvim.get_icon "DefaultFile" .. " Bufs", ]]
-			--[[ git_status = astronvim.get_icon "Git" .. " Git", ]]
-			--[[ diagnostics = astronvim.get_icon "Diagnostic" .. " Diagnostic", ]]
-		},
 	},
 	default_component_configs = {
 		indent = { padding = 0 },
+		container = {
+        enable_character_fade = true
+    },
 		icon = {
-			--[[ folder_closed = astronvim.get_icon "FolderClosed", ]]
-			--[[ folder_open = astronvim.get_icon "FolderOpen", ]]
-			--[[ folder_empty = astronvim.get_icon "FolderEmpty", ]]
-			--[[ default = astronvim.get_icon "DefaultFile", ]]
-
 			folder_default = "",
 			folder_open = "",
 			folder_empty = "",
@@ -35,23 +27,14 @@ local config = {
 		},
 		git_status = {
 			symbols = {
-				conflict  = "",
-				unstaged  = "",
-				staged    = "S",
-				unmerged  = "",
-				renamed   = "➜",
-				deleted   = "",
+				conflict = "",
+				unstaged = "",
+				staged = "S",
+				unmerged = "",
+				renamed = "➜",
+				deleted = "",
 				untracked = "U",
-				ignored   = "◌",
-				--[[ added = astronvim.get_icon "GitAdd", ]]
-				--[[ deleted = astronvim.get_icon "GitDelete", ]]
-				--[[ modified = astronvim.get_icon "GitChange", ]]
-				--[[ renamed = astronvim.get_icon "GitRenamed", ]]
-				--[[ untracked = astronvim.get_icon "GitUntracked", ]]
-				--[[ ignored = astronvim.get_icon "GitIgnored", ]]
-				--[[ unstaged = astronvim.get_icon "GitUnstaged", ]]
-				--[[ staged = astronvim.get_icon "GitStaged", ]]
-				--[[ conflict = astronvim.get_icon "GitConflict", ]]
+				ignored = "◌",
 			},
 		},
 	},
@@ -63,7 +46,7 @@ local config = {
 			--[[ O = function(state) astronvim.system_open(state.tree:get_node():get_id()) end, ]]
 			H = "prev_source",
 			L = "next_source",
-			v = "toggle_node"
+			v = "toggle_node",
 		},
 	},
 	filesystem = {
@@ -73,7 +56,12 @@ local config = {
 		window = { mappings = { h = "toggle_hidden" } },
 	},
 	event_handlers = {
-		{ event = "neo_tree_buffer_enter", handler = function(_) vim.opt_local.signcolumn = "auto" end },
+		{
+			event = "neo_tree_buffer_enter",
+			handler = function(_)
+				vim.opt_local.signcolumn = "auto"
+			end,
+		},
 	},
 }
 
