@@ -69,23 +69,47 @@ lspconfig["html"].setup({
 	on_attach = on_attach,
 })
 
+-- configure svelte server
+lspconfig["svelte"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- json ls
+lspconfig["jsonls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure typescript server with plugin
 typescript.setup({
+	disable_commands = false, -- prevent the plugin from creating Vim commands
+	debug = false, -- enable debug logging for commands
+	go_to_source_definition = {
+		fallback = true, -- fall back to standard LSP definition on failure
+	},
 	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "typescript", "typescriptreact" },
+	},
+})
+
+flutter_tools.setup({
+	lsp = {
 		capabilities = capabilities,
 		on_attach = on_attach,
 	},
 })
 
---[[ flutter_tools.setup({ ]]
---[[ 	lsp = { ]]
---[[ 		capabilities = capabilities, ]]
---[[ 		on_attach = on_attach, ]]
---[[ 	}, ]]
---[[ }) ]]
-
 -- configure css server
 lspconfig["cssls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure go server
+lspconfig["gopls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

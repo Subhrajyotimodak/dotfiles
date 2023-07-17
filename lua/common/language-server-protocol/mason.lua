@@ -6,6 +6,8 @@ local lsp_servers = {
 	"lua_ls",
 	"emmet_ls",
 	"pyright",
+	"goimports",
+	"golines",
 }
 
 local linters_and_formatters = {

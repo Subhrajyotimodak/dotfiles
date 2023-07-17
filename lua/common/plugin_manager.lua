@@ -12,6 +12,8 @@ local packer_install = function(use)
 	-- preferred colorscheme
 	use("bluz71/vim-nightfly-guicolors")
 	use({ "norcalli/nvim-colorizer.lua" })
+	use("nyoom-engineering/nyoom.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
@@ -19,6 +21,9 @@ local packer_install = function(use)
 	-----------------------
 	-- essential plugins --
 	-----------------------
+
+	-- indent line --
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- add, delete, change surroundings (it's awesome)
 	use("tpope/vim-surround")
@@ -48,7 +53,7 @@ local packer_install = function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
-	use("github/copilot.vim") -- github copilot
+	--[[ use("github/copilot.vim") -- github copilot ]]
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
