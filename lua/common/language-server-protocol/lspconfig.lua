@@ -34,13 +34,13 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "gdd", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 	keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
-	keymap.set("n", "<leader>t", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
-	keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
-	keymap.set("n", "<leader>x", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
-	keymap.set("n", "<leader>xx", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
-	keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
-	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+	keymap.set("n", "<leader>t", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts) -- see available code actions
+	keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) -- smart rename
+	keymap.set("n", "<leader>x", "<cmd>lua vim.diagnostic.open_float()<CR>", opts) -- show  diagnostics for line
+	keymap.set("n", "<leader>xx", "<cmd>lua vim.lsp.buf.show_cursor_diagnostics()<CR>", opts) -- show diagnostics for cursor
+	keymap.set("n", "[d", "<cmd>lua vim.lsp.buf.diagnostic_jump_prev()<CR>", opts) -- jump to previous diagnostic in buffer
+	keymap.set("n", "]d", "<cmd>lua vim.lsp.buf.diagnostic_jump_next()<CR>", opts) -- jump to next diagnostic in buffer
+	keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- show documentation for what is under cursor
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 	keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
@@ -73,6 +73,7 @@ lspconfig["html"].setup({
 lspconfig["svelte"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	filetypes = { "svelte", "html" },
 })
 
 -- json ls
@@ -104,6 +105,11 @@ flutter_tools.setup({
 
 -- configure css server
 lspconfig["cssls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

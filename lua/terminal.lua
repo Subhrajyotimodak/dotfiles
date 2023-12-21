@@ -24,4 +24,5 @@ require("common.language-server-protocol.mason")
 ---@diagnostic disable-next-line: different-requires
 require("common.language-server-protocol.lspconfig")
 require("common.language-server-protocol.lspsaga")
-require("common.language-server-protocol.null-ls")
+require("common.language-server-protocol.guard")
+--[[ require("common.language-server-protocol.null-ls") ]]

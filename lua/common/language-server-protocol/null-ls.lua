@@ -22,8 +22,8 @@ null_ls.setup({
 			filetypes = { "svelte" },
 		}), -- js/ts formatter
 		formatting.stylua, -- lua formatter
+		formatting.blackd,
 
-		formatting.golines,
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
