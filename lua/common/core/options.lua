@@ -33,19 +33,18 @@ local options = {
 	wrap = false,                           -- display lines as one long line
 	scrolloff = 8,                          -- is one of my fav
 	sidescrolloff = 8,
-	fillchars = "fold: ,vert:│,eob: ,msgsep:‾"
+	fillchars = "fold: ,vert:│,eob: ,msgsep:‾",
 	-- fillchars = "eob:|,fold:|,vert:|",
-
 }
 -- vim.wo.fillchars='eob: '
 -- vim.api.nvim_command('set fillchars=eob:\')
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-vim.cmd "set guifont=JetBrainsMono\\ Nerd\\ Font:h17"
+vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.cmd([[set iskeyword+=-]])
+vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
+vim.cmd("set guifont=JetBrainsMono\\ Nerd\\ Font:h17")
