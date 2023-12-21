@@ -14,7 +14,7 @@ ft("lua"):fmt("lsp"):append("stylua")
 
 ft("typescript,javascript,typescriptreact,svelte"):fmt("prettier"):lint("eslint_d")
 
-ft("python"):fmt("black"):lint("pyright")
+ft("python"):fmt("black")
 
 guard.setup({
 	-- the only options for the setup function

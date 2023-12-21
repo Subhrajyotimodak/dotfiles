@@ -6,7 +6,6 @@ local lsp_servers = {
 	"lua_ls",
 	"emmet_ls",
 	"pyright",
-	"goimports",
 	"svelte",
 	"clangd",
 }

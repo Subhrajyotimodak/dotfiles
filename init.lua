@@ -19,7 +19,7 @@ require("common.plugins.alpha")
 require("common.plugins.project")
 require("common.plugins.gitsigns")
 require("common.plugins.indentation-line")
-require("common.plugins.symbol-outline")
+--[[ require("common.plugins.symbol-outline") ]]
 require("common.plugins.dressing")
 
 require("common.language-server-protocol.mason")

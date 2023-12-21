@@ -5,6 +5,8 @@ if not saga_status then
 	return
 end
 
+local macchiato = require("catppuccin.palettes").get_palette("macchiato")
+
 saga.setup({
 	-- keybinds for navigation in lspsaga window
 	scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
@@ -12,4 +14,12 @@ saga.setup({
 	definition = {
 		edit = "<CR>",
 	},
+	diagnostic = {
+		show_layout = "normal"
+	},
+	finder = {
+		layout = "normal"
+	}
+
+
 })

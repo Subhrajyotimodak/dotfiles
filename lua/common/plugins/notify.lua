@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+local banned_messages = { "No information available" }
+
 local config = {
 	fps = 120,
 	max_width = 60,
@@ -25,4 +27,13 @@ local config = {
 }
 
 notify.setup(config)
-vim.notify = notify
+local with_banned_messages_filter = function(msg, ...)
+	for _, banned in ipairs(banned_messages) do
+		if msg == banned then
+			return
+		end
+	end
+	return notify(msg, ...)
+end
+
+vim.notify = with_banned_messages_filter
