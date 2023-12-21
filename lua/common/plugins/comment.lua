@@ -1,6 +1,8 @@
 -- import comment plugin safely
 local setup, comment = pcall(require, "Comment")
 if not setup then
+	vim.notify("comment is not installed :(")
+
 	return
 end
 

@@ -5,7 +5,7 @@ if not setup then
 end
 
 -- for conciseness
-local formatting = null_ls.builtins.formatting -- to setup formatters
+local formatting = null_ls.builtins.formatting   -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 -- to setup format on save
@@ -20,7 +20,7 @@ null_ls.setup({
 		formatting.prettier, -- js/ts formatter
 		formatting.prettier.with({
 			filetypes = { "svelte" },
-		}), -- js/ts formatter
+		}),              -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		formatting.blackd,
 
@@ -31,6 +31,7 @@ null_ls.setup({
 			end,
 		}),
 	},
+
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then

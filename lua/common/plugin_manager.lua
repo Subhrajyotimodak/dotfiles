@@ -2,6 +2,11 @@
 local packer_install = function(use)
 	use("wbthomason/packer.nvim")
 
+	-- toast notification --
+	use({
+		"rcarriga/nvim-notify",
+	})
+
 	-- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
 
@@ -63,9 +68,12 @@ local packer_install = function(use)
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
-	use({ "nvimdev/guard.nvim", requires = {
-		"nvimdev/guard-collection",
-	} })
+	use({
+		"nvimdev/guard.nvim",
+		requires = {
+			"nvimdev/guard-collection",
+		},
+	})
 
 	--[[ use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters ]]
 	--[[ use("jay-babu/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls ]]
@@ -154,7 +162,7 @@ end
 -- true if packer was just installed
 local packer_bootstrap = ensure_packer()
 
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugin_manager.lua source <afile> | PackerSync

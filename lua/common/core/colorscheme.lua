@@ -4,8 +4,6 @@ if not status_ok then
 	return
 end
 
-catppuccin.setup({
-	transparent_background = true,
-})
+catppuccin.setup()
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme catppuccin-macchiato")

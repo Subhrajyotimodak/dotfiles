@@ -1,5 +1,6 @@
 local status_ok, project = pcall(require, "project_nvim")
 if not status_ok then
+	vim.notify("project not found")
 	return
 end
 project.setup({
@@ -34,12 +35,12 @@ project.setup({
 
 	---@usage list of lsp client names to ignore when using **lsp** detection. eg: { "efm", ... }
 	ignore_lsp = {
-    "node_modules"
-  },
+		"node_modules"
+	},
 
 	---@type string
 	---@usage path to store the project history for use in telescope
-  datapath = vim.fn.stdpath("data"),
+	datapath = vim.fn.stdpath("data"),
 })
 
 local tele_status_ok, telescope = pcall(require, "telescope")

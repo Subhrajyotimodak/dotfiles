@@ -1,6 +1,8 @@
 -- import nvim-cmp plugin safely
 local cmp_status, cmp = pcall(require, "cmp")
 if not cmp_status then
+	vim.notify("cmp is not installed :(")
+
 	return
 end
 
@@ -38,7 +40,7 @@ cmp.setup({
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-		["<C-e>"] = cmp.mapping.abort(), -- close completion window
+		["<C-e>"] = cmp.mapping.abort(),      -- close completion window
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 		["<C-.>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
@@ -74,7 +76,7 @@ cmp.setup({
 		{ name = "nvim_lsp" }, -- lsp
 		{ name = "luasnip" }, -- snippets
 		{ name = "buffer" }, -- text within current buffer
-		{ name = "path" }, -- file system paths
+		{ name = "path" },   -- file system paths
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {

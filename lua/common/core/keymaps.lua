@@ -55,6 +55,6 @@ keymap("n", "<leader>e", ":NeoTreeFloatToggle<cr>", opts)
 -- Telescope
 keymap("n", "<leader>fg", ":Telescope git_files<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
-keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string in current working directory as you type
+keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts)   -- find string in current working directory as you type
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
 keymap("n", "<leader>m", ":SymbolsOutline<cr>", opts)
